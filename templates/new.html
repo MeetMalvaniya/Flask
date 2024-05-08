@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>sqlelchemy ex</h3>
+        <hr />
+        {% for category, message in get_flashed_messages(with_categories=True) %}
+        <div class="alert alert-denger">
+            {{ message}}
+        </div>
+        {{% endfor %}}
+        <form action="{{ request.path}}">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" placeholder="Name"><br>
+            <label for="city">City</label><br>
+            <input type="text" name="city" placeholder="City"><br>
+            <label for="addr">addr</label><br>
+            <textarea name="addr" placeholder="addr"></textarea><br>
+            <label for="pin">Pincode</label><br>
+            <input type="text" name="pin" placeholder="pin">
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
